@@ -1,7 +1,9 @@
 package org.zrclass.mall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,12 +35,37 @@ public class CategoryController {
     /**
      * 列表
      */
-    @RequestMapping("/list")
+    @RequestMapping("/list/tree")
     //@RequiresPermissions("product:category:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = categoryService.queryPage(params);
+    public R list(){
 
-        return R.ok().put("page", page);
+        List<CategoryEntity> entities =categoryService.listWithTree();
+        // 筛选出所有一级分类
+        List<CategoryEntity> level1Menus = entities.stream().
+                filter((categoryEntity) -> categoryEntity.getParentCid() == 0)
+                .map((menu) -> {
+                    menu.setChildren(getChildrens(menu, entities));
+                    return menu;
+                }).sorted((menu1, menu2) -> {
+                    return (menu1.getSort() == null? 0 : menu1.getSort()) - (menu2.getSort() == null? 0 : menu2.getSort());
+                })
+                .collect(Collectors.toList());
+        return R.ok().put("data", level1Menus);
+    }
+
+    /**
+     * 递归找所有的子菜单、中途要排序
+     */
+    private List<CategoryEntity> getChildrens(CategoryEntity root, List<CategoryEntity> all){
+        List<CategoryEntity> children = all.stream().filter(categoryEntity ->
+                categoryEntity.getParentCid() == root.getCatId()
+        ).map(categoryEntity -> {
+            categoryEntity.setChildren(getChildrens(categoryEntity, all));
+            return categoryEntity;
+        }).sorted((menu1,menu2) -> {
+            return (menu1.getSort() == null? 0 : menu1.getSort()) - (menu2.getSort() == null? 0 : menu2.getSort());
+        }).collect(Collectors.toList());
+        return children;
     }
 
 

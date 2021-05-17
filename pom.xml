@@ -14,6 +14,8 @@
         <module>mall-coupon</module>
         <module>mall-ware</module>
         <module>mall-order</module>
+        <module>mall-gateway</module>
+        <module>renren-fast</module>
     </modules>
     <packaging>pom</packaging>
     <description>聚合服务</description>
