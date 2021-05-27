@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableFeignClients
 @EnableTransactionManagement
 @EnableDiscoveryClient
-@MapperScan("com.firenay.mall.ware.dao")
+@MapperScan("org.zrclass.mall.ware.dao")
 @SpringBootApplication
 public class MallWareApplication {
 

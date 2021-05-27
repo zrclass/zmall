@@ -41,7 +41,7 @@ mybatis-plus:
       id-type: auto
 logging:
   level:
-    com.firenay.mall.ware: debug
+    org.zrclass.mall.ware: debug
 myRabbitmq:
   MQConfig:
     queues: stock.release.stock.queue

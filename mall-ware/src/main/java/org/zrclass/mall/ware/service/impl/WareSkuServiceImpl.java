@@ -177,7 +177,7 @@ public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> i
                 price = (Double) data.get("price");
             }
         }catch (Exception e){
-            System.out.println("com.firenay.mall.ware.service.impl.WareSkuServiceImpl：远程调用出错");
+            System.out.println("org.zrclass.mall.ware.service.impl.WareSkuServiceImpl：远程调用出错");
         }
         // 新增操作
         if(entities == null || entities.size() == 0){
