@@ -17,7 +17,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -120,6 +120,21 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>maven-ali</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public//</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>

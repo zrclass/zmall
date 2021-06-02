@@ -3,6 +3,7 @@ package org.zrclass.mall.ware.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.zrclass.common.utils.PageUtils;
 import org.zrclass.mall.ware.entity.WareInfoEntity;
+import org.zrclass.mall.ware.vo.FareVo;
 
 import java.util.Map;
 
@@ -16,5 +17,11 @@ import java.util.Map;
 public interface WareInfoService extends IService<WareInfoEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    /**
+     * 根据收获地址计算运费
+     */
+    FareVo getFare(Long addrId);
 }
+
 

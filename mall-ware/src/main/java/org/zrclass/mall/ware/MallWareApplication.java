@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * date：2020/6/6 20:49
  */
 
-@EnableRabbit
+//@EnableRabbit
 @EnableFeignClients
 @EnableTransactionManagement
 @EnableDiscoveryClient

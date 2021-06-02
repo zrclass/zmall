@@ -36,24 +36,20 @@ public class BrandController {
      */
     @RequestMapping("/list")
     //@RequiresPermissions("product:brand:list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = brandService.queryPage(params);
-
         return R.ok().put("page", page);
     }
-
 
     /**
      * 信息
      */
     @RequestMapping("/info/{brandId}")
-    //@RequiresPermissions("product:brand:info")
-    public R info(@PathVariable("brandId") Long brandId){
-		BrandEntity brand = brandService.getById(brandId);
+    public R info(@PathVariable("brandId") Long brandId) {
+        BrandEntity brand = brandService.getById(brandId);
 
         return R.ok().put("brand", brand);
     }
-
 
     @GetMapping("/infos")
     public R info(@RequestParam("brandIds") List<Long> brandIds) {
@@ -73,7 +69,6 @@ public class BrandController {
         return R.ok();
     }
 
-
     /**
      * 修改
      * POSTman：{"name":"aaa","logo":"abc"}
@@ -92,7 +87,6 @@ public class BrandController {
         brandService.updateById(brand);
         return R.ok();
     }
-
 
     /**
      * 删除

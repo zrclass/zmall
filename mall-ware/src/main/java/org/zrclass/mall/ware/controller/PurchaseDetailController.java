@@ -31,24 +31,21 @@ public class PurchaseDetailController {
     private PurchaseDetailService purchaseDetailService;
 
     /**
-     * 列表
+     * 	采购需求模糊查询
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("ware:purchasedetail:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = purchaseDetailService.queryPage(params);
 
         return R.ok().put("page", page);
     }
 
-
     /**
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("ware:purchasedetail:info")
     public R info(@PathVariable("id") Long id){
-		PurchaseDetailEntity purchaseDetail = purchaseDetailService.getById(id);
+        PurchaseDetailEntity purchaseDetail = purchaseDetailService.getById(id);
 
         return R.ok().put("purchaseDetail", purchaseDetail);
     }
@@ -57,9 +54,8 @@ public class PurchaseDetailController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("ware:purchasedetail:save")
     public R save(@RequestBody PurchaseDetailEntity purchaseDetail){
-		purchaseDetailService.save(purchaseDetail);
+        purchaseDetailService.save(purchaseDetail);
 
         return R.ok();
     }
@@ -68,9 +64,8 @@ public class PurchaseDetailController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("ware:purchasedetail:update")
     public R update(@RequestBody PurchaseDetailEntity purchaseDetail){
-		purchaseDetailService.updateById(purchaseDetail);
+        purchaseDetailService.updateById(purchaseDetail);
 
         return R.ok();
     }
@@ -79,11 +74,9 @@ public class PurchaseDetailController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("${moduleNamez}:purchasedetail:delete")
     public R delete(@RequestBody Long[] ids){
-		purchaseDetailService.removeByIds(Arrays.asList(ids));
+        purchaseDetailService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }
-
 }

@@ -12,7 +12,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 //@EnableRedisHttpSession
 //// 开启缓存
 //@EnableCaching
-//@EnableFeignClients(basePackages = "org.zrclass.mall.product.feign")
+@EnableFeignClients(basePackages = "org.zrclass.mall.product.feign")
 @EnableDiscoveryClient
 @MapperScan("org.zrclass.mall.product.dao")
 @SpringBootApplication
