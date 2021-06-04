@@ -17,6 +17,7 @@
         <module>mall-gateway</module>
         <module>renren-fast</module>
         <module>mall-search</module>
+        <module>mall-auth</module>
     </modules>
     <packaging>pom</packaging>
     <description>聚合服务</description>
