@@ -79,7 +79,7 @@ CREATE TABLE `ums_member`  (
 -- ----------------------------
 INSERT INTO `ums_member` VALUES (1, 1, 'firenay', '$2a$10$uDXc05.IsjGI//f7HC8/lOGys0oRiFZX59olzqVqTl8IKxR8iBVGy', 'firenay', '18173516208', 'xxx@gmail.com', NULL, 0, '2020-06-25', '湖南 长沙', 'JAVA', NULL, NULL, NULL, NULL, 0, '2020-06-25 13:09:14', NULL, NULL, NULL);
 INSERT INTO `ums_member` VALUES (2, 1, 'sentinel', '$2a$10$j5XRpUeGq7AYIFk7pqdvyebK.Bo5MvasCxk.8RuBWsHFcq5RzXKEC', 'sentinel', '18173516102', 'xxx@gmail.com', NULL, 1, '2020-06-25', '湖南 长沙', 'JAVA', NULL, NULL, NULL, NULL, 0, '2020-06-25 13:15:33', NULL, NULL, NULL);
-INSERT INTO `ums_member` VALUES (3, 1, 'firenayfly', '$2a$10$UvvfpBagTqbalI6UTnq5nOiPheEdbKLO64fozWMx1lUeK9p2tM366', 'firenayfly', '18467894965', 'xxx@gmail.com', NULL, 1, '2020-06-25', '湖南 长沙', 'JAVA', NULL, NULL, NULL, NULL, 0, '2020-06-25 13:18:32', NULL, NULL, NULL);
+INSERT INTO `ums_member` VALUES (3, 1, 'zrclass', '$2a$10$UvvfpBagTqbalI6UTnq5nOiPheEdbKLO64fozWMx1lUeK9p2tM366', 'zrclass', '18467894965', 'xxx@gmail.com', NULL, 1, '2020-06-25', '湖南 长沙', 'JAVA', NULL, NULL, NULL, NULL, 0, '2020-06-25 13:18:32', NULL, NULL, NULL);
 INSERT INTO `ums_member` VALUES (4, 1, '汀西氟的我是你', '$2a$10$uDXc05.IsjGI//f7HC8/lOGys0oRiFZX59olzqVqTl8IKxR8iBVGy', '汀西氟的我是你', '18467894965', 'xxx@gmail.com', NULL, 1, '2020-06-26', '湖南 长沙', '自媒体', NULL, NULL, NULL, NULL, 0, '2020-06-26 09:36:00', '5605937365', '2.00b5w4HGMwxc6B0e3d62c666DlN1DD', '157679999');
 
 -- ----------------------------
@@ -174,7 +174,7 @@ CREATE TABLE `ums_member_receive_address`  (
 -- ----------------------------
 INSERT INTO `ums_member_receive_address` VALUES (1, 1, 'firenay', '18173516208', NULL, '湖南', '长沙', NULL, '望城区', NULL, 1);
 INSERT INTO `ums_member_receive_address` VALUES (2, 2, 'sentinel', '18173516102', NULL, '湖南', '长沙', NULL, '雨花区', NULL, 1);
-INSERT INTO `ums_member_receive_address` VALUES (3, 3, 'firenayfly', '15421564125', NULL, '陕西', '西安', NULL, '新城区', NULL, 1);
+INSERT INTO `ums_member_receive_address` VALUES (3, 3, 'zrclass', '15421564125', NULL, '陕西', '西安', NULL, '新城区', NULL, 1);
 
 -- ----------------------------
 -- Table structure for ums_member_statistics_info
